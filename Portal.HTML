@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Information</title>
+  <!-- Load Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+</head>
+<body style="background-color: white;">
+  <div class="container">
+    <h1>Patient Information</h1>
+    <form id="patient-form" onsubmit="submitPatientInformation(event)">
+      <ul class="list-group">
+        <li class="list-group-item"><strong>Patient Name:</strong> <input type="text" class="form-control" id="name-input" required></li>
+        <li class="list-group-item"><strong>Address:</strong> <input type="text" class="form-control" id="address-input"required></li>
+        <li class="list-group-item"><strong>Phone:</strong> <input type="tel" class="form-control" id="phone-input" required></li>
+        <li class="list-group-item"><strong>Email:</strong> <input type="email" class="form-control" id="email-input"required></li>
+        <li class="list-group-item"><strong>Date of Birth:</strong> <input type="date" class="form-control" id="dob-input" required></li>
+        <li class="list-group-item"><strong>Gender:</strong> 
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" value="male" id="gender-male">
+            <label class="form-check-label" for="gender-male">Male</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" value="female" id="gender-female">
+            <label class="form-check-label" for="gender-female">Female</label>
+          </div>
+        </li>
+        <li class="list-group-item"><strong>Medications:</strong> <textarea class="form-control" id="medications-input"></textarea></li>
+        <li class="list-group-item"><strong>Health Conditions:</strong> <textarea class="form-control" id="health-conditions-input"></textarea></li>
+      </ul>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <!-- Load Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        
+<script src="Portal.JS"></script>
+
