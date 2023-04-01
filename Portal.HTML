@@ -8,34 +8,58 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
         crossorigin="anonymous">
 </head>
-<body style="background-color: white;">
-  <div class="container">
-    <h1>Patient Information</h1>
+<body style="background-color: #f8f9fa;">
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Patient Information</h1>
     <form id="patient-form" onsubmit="submitPatientInformation(event)">
-      <ul class="list-group">
-        <li class="list-group-item"><strong>Patient Name:</strong> <input type="text" class="form-control" id="name-input" required></li>
-        <li class="list-group-item"><strong>Address:</strong> <input type="text" class="form-control" id="address-input"required></li>
-        <li class="list-group-item"><strong>Phone:</strong> <input type="tel" class="form-control" id="phone-input" required></li>
-        <li class="list-group-item"><strong>Email:</strong> <input type="email" class="form-control" id="email-input"required></li>
-        <li class="list-group-item"><strong>Date of Birth:</strong> <input type="date" class="form-control" id="dob-input" required></li>
-        <li class="list-group-item"><strong>Gender:</strong> 
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" value="male" id="gender-male">
-            <label class="form-check-label" for="gender-male">Male</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" value="female" id="gender-female">
-            <label class="form-check-label" for="gender-female">Female</label>
-          </div>
-        </li>
-        <li class="list-group-item"><strong>Medications:</strong> <textarea class="form-control" id="medications-input"></textarea></li>
-        <li class="list-group-item"><strong>Health Conditions:</strong> <textarea class="form-control" id="health-conditions-input"></textarea></li>
-      </ul>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="form-group">
+        <label for="name-input"><strong>Patient Name:</strong></label>
+        <input type="text" class="form-control" id="name-input" required>
+      </div>
+      <div class="form-group">
+        <label for="address-input"><strong>Address:</strong></label>
+        <input type="text" class="form-control" id="address-input" required>
+      </div>
+      <div class="form-group">
+        <label for="phone-input"><strong>Phone:</strong></label>
+        <input type="tel" class="form-control" id="phone-input" required>
+      </div>
+      <div class="form-group">
+        <label for="email-input"><strong>Email:</strong></label>
+        <input type="email" class="form-control" id="email-input" required>
+      </div>
+      <div class="form-group">
+        <label for="dob-input"><strong>Date of Birth:</strong></label>
+        <input type="date" class="form-control" id="dob-input" required>
+      </div>
+      <div class="form-group">
+        <label for="gender-input"><strong>Gender:</strong></label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender-input" id="male-input" value="Male" required>
+          <label class="form-check-label" for="male-input">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender-input" id="female-input" value="Female" required>
+          <label class="form-check-label" for="female-input">
+            Female
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="medications-input"><strong>Medications:</strong></label>
+        <textarea class="form-control" id="medications-input"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="health-conditions-input"><strong>Health Conditions:</strong></label>
+        <textarea class="form-control" id="health-conditions-input"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
     </form>
   </div>
   <!-- Load Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        
-<script src="Portal.JS"></script>
-
+  <script src="Portal.JS"></script>
+</body>
+</html>
